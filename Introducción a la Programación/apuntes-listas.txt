@@ -1,0 +1,25 @@
+Listas, strings, colecciones de datos
+
+Permiten guardar varios valores en una sola variable:
+- str -> letras, ejemplo: "Hola"
+- list -> cualquier cosa, ejemplo: [ "Pikachu", "Eléctrico", 67, 88, True ]
+
+Índices: podemos acceder a cada elemento utilizando su índice
+- Empiezan en 0
+- Terminan en len(coleccion) - 1
+	Ejemplo: palabra:str = "Hola"
+		print(palabra[0]) # Imprime H
+		print(palabra[3]) # Imprime a
+		print(palabra[4]) # Da error porque nos hemos salido del str
+		
+- Recorrer todos índices: hacemos un range que empiece en 0 y termine en casi len(coleccion)
+	range(0, len(coleccion)) es decir range(len(coleccion))
+	
+- La función index() hace lo contrario que los []:
+	- Los [] da un dato cuando les pasamos un índice. Ej: palabra[3] nos da "a"
+	- index() da índice cuando le pasamos un dato. Ej: palabra.index("a") nos da 3
+		¡Ojo! Tenemos que asegurarnos de que el dato está en la colección.
+			Si "a" no está en palabra -> Error!
+			Nos podemos asegurar con el operador in:
+				if ("a" in palabra):
+					posicion = palabra.index("a")
